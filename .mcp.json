@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "code-review-graph": {
+      "command": "D:\\Python312\\Scripts\\code-review-graph.exe",
+      "args": [
+        "serve"
+      ],
+      "type": "stdio"
+    }
+  }
+}

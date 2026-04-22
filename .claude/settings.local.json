@@ -4,7 +4,22 @@
       "Read(//c/Users/Usuario/.claude/skills/ui-ux-pro-max/**)",
       "Bash(python skills/ui-ux-pro-max/scripts/search.py \"portfolio cv personal professional minimal elegant\" --design-system -p \"Portfolio Personal\" -f markdown)",
       "Bash(python *)",
-      "mcp__magic__21st_magic_component_inspiration"
+      "mcp__magic__21st_magic_component_inspiration",
+      "Bash(gh repo *)",
+      "WebFetch(domain:github.com)",
+      "Bash(mkdir -p ~/.claude/skills)",
+      "Bash(git clone *)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(cp -r /tmp/caveman-repo/skills/caveman ~/.claude/skills/caveman)",
+      "Bash(cp -r /tmp/caveman-repo/skills/caveman-commit ~/.claude/skills/caveman-commit)",
+      "Bash(cp -r /tmp/caveman-repo/skills/caveman-review ~/.claude/skills/caveman-review)",
+      "Bash(cp -r /tmp/caveman-repo/skills/caveman-help ~/.claude/skills/caveman-help)",
+      "Bash(cp -r /tmp/caveman-repo/skills/compress ~/.claude/skills/compress)",
+      "Bash(pip install *)",
+      "Bash(code-review-graph install *)",
+      "Bash(pip show *)",
+      "Bash(D:/Python312/Scripts/code-review-graph.exe install *)",
+      "Bash(D:/Python312/Scripts/code-review-graph.exe build *)"
     ]
   }
 }
