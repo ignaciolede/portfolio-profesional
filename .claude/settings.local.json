@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/Usuario/.claude/skills/ui-ux-pro-max/**)",
+      "Bash(python skills/ui-ux-pro-max/scripts/search.py \"portfolio cv personal professional minimal elegant\" --design-system -p \"Portfolio Personal\" -f markdown)",
+      "Bash(python *)",
+      "mcp__magic__21st_magic_component_inspiration"
+    ]
+  }
+}

@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ignacio Lederhos - Web Oficial</title>
+  <meta name="description" content="Portfolio y CV profesional de Ignacio Lederhos, Estudiante Tecnico en Programación.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%237B9669'/><text x='16' y='22' font-family='Arial,sans-serif' font-weight='bold' font-size='14' fill='white' text-anchor='middle'>IL</text></svg>">
+
+  <!-- ============================================================ -->
+  <!--  FUENTES — Archivo (Titulares) + Space Grotesk (Cuerpo)      -->
+  <!-- ============================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS — Animate On Scroll -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <!-- ============================================================ -->
+  <!--  CONFIGURACIÓN DE TAILWIND — Paleta personalizada            -->
+  <!-- ============================================================ -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            fondo:      '#E6E6E6',
+            primario:   '#404E3B',
+            acento:     '#7B9669',
+            tarjeta:    '#BAC8B1',
+            secundario: '#6C8480',
+          },
+          fontFamily: {
+            heading: ['Archivo',      'sans-serif'],
+            body:    ['Space Grotesk','sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- ============================================================ -->
+  <!--  CONTENIDO EDITABLE — Cambia solo este bloque CONFIG         -->
+  <!-- ============================================================ -->
+  <script>
+    const CONFIG = {
+
+      /* ── Datos personales ────────────────────────────────────── */
+      personal: {
+        nombre:          "Ignacio",
+        apellido:        "Lederhos",
+        titulo:          "Estudiante Tecnico en Programación",
+        subtitulo:       "Programador | Estudiante de Programación | AI Power User",
+        descripcion:     "Desarrollo soluciones digitales combinando lógica de sistemas con el poder de la IA para maximizar la eficiencia y la precisión. Mi enfoque está en crear código limpio y escalable, utilizando herramientas de vanguardia para entregar resultados de alta calidad en tiempos competitivos",
+        ubicacion:       "Buenos Aires, Argentina",
+        email:           "ignaciolede@gmail.com",
+        telefono:        "+54 9 11 2886-8804",
+        disponibilidad:  "Disponible para proyectos y contratación",
+        fotoPerfil:      "https://res.cloudinary.com/dp0xvamve/image/upload/v1776823809/FOTO_CV_dbo3ai.jpg",
+      },
+
+      /* ── Sección Sobre Mí ────────────────────────────────────── */
+      sobreMi: {
+        parrafo1: "Soy un estudiante de la Tecnicatura en Programacion en la UTN y programador en formacion enfocado en la creación de soluciones digitales donde la lógica y la innovación convergen. Mi stack principal incluye HTML, CSS y JavaScript, con una sólida base en C# y arquitectura de software.",
+        parrafo2: "Lo que realmente define mi flujo de trabajo es la productividad aumentada por IA. Me especializo en integrar herramientas avanzadas como Claude para optimizar el ciclo de desarrollo, permitiéndome entregar proyectos escalables y prolijos con una eficiencia muy superior a la media. No solo escribo código; diseño sistemas inteligentes utilizando lo último en tecnología para resolver problemas complejos en tiempo récord. Cuando no estoy construyendo productos digitales, aboco mi vida a estar al servicio en mi voluntariado en Scouts de Argentina, hace mas de 16 años.",
+        dato1:    { valor: "1",  label: "Proyecto Completado" },
+      },
+
+      /* ── Proyectos ───────────────────────────────────────────── */
+      proyectos: [
+        {
+          id:          1,
+          titulo:      "Portfolio Profesional Personal",
+          descripcion: "Sitio web estático de alto rendimiento con arquitectura orientada a datos. Diseñado para centralizar mi trayectoria y proyectos, utilizando una estructura desacoplada donde el contenido se renderiza dinámicamente desde objetos JSON.",
+          stack:       ["HTML5", "Tailwind CSS", "JavaScript", "JSON"],
+          categoria:   "Frontend Architecture",
+          imgSrc:      "https://res.cloudinary.com/dp0xvamve/image/upload/v1776834412/Captura_de_pantalla_2026-04-22_014333_mjsfqh.png",
+          linkDemo:    "#",
+          linkCodigo:  "#",
+        },
+        {
+          id:          2,
+          titulo:      "Proximamente...",
+          descripcion: "",
+          stack:       [],
+          categoria:   "",
+          imgSrc:      "https://res.cloudinary.com/dp0xvamve/image/upload/v1776833756/atp-iluminacion-proximamente_f8tj6b.jpg",
+          linkDemo:    "#",
+          linkCodigo:  "#",
+        },
+        {
+          id:          3,
+          titulo:      "Proximamente...",
+          descripcion: "",
+          stack:       [],
+          categoria:   "",
+          imgSrc:      "https://res.cloudinary.com/dp0xvamve/image/upload/v1776833756/atp-iluminacion-proximamente_f8tj6b.jpg",
+          linkDemo:    "#",
+          linkCodigo:  "#",
+        },
+        {
+          id:          4,
+          titulo:      "Proximamente...",
+          descripcion: "",
+          stack:       [],
+          categoria:   "",
+          imgSrc:      "https://res.cloudinary.com/dp0xvamve/image/upload/v1776833756/atp-iluminacion-proximamente_f8tj6b.jpg",
+          linkDemo:    "#",
+          linkCodigo:  "#",
+        },
+      ],
+
+      /* ── Formación Académica ─────────────────────────────────── */
+      formacion: [
+        {
+          carrera:     "Tecnicatura en Programación",
+          institucion: "Universidad Tecnologica Nacional, Sede Haedo",
+          estado:      "2024 - En curso",
+          logros: [
+            "Formacion de pensamiento logico de programación",
+            "Lenguajes C, C++, C#, SQL, PL/SQL",
+            "Gestion de Proyectos",
+          ],
+        },
+        {
+          carrera:     "Cursos HTML, CSS, JS",
+          institucion: "Platzi",
+          estado:      "Finalizados - 2026",
+          logros: [
+            "Conocimientos HTML, CSS, JS",
+            "Capacidad de creacion de proyectos web",
+          ],
+        },
+        {
+          carrera:     "Secundario Tecnico, Maestro Mayor de Obra",
+          institucion: "E.E.S.T N°3 Manuel Belgrano",
+          estado:      "2017 - 2023",
+          logros: [
+            "Gestion de Proyectos de Arquitectura, Electricidad y Agua",
+          ],
+        },
+      ],
+
+      /* ── Habilidades ─────────────────────────────────────────── */
+      habilidades: {
+        tecnicas: [
+          { nombre: "[JavaScript]", nivel: 60 },
+          { nombre: "[CSS]",          nivel: 60 },
+          { nombre: "[HTML]",         nivel: 70 },
+          { nombre: "[C++/C#]",           nivel: 65 },
+          { nombre: "[SQL / MySQL]",               nivel: 70 },
+          { nombre: "[AI]",            nivel: 85 },
+        ],
+        blandas: [
+          "[Liderazgo de equipos]",
+          "[Comunicación efectiva]",
+          "[Resolución de problemas]",
+          "[Pensamiento crítico]",
+          "[Gestión del tiempo]",
+          "[Adaptabilidad]",
+          "[Trabajo colaborativo]",
+          "[Constante aprendizaje]",
+        ],
+        herramientas: [
+          "[VS Code]", "[Git / GitHub]",
+          "[Word]",  "[Excel]",  "[Claude]",
+          "[Gemini]",
+        ],
+      },
+
+      /* ── Redes sociales ──────────────────────────────────────── */
+      redes: {
+        linkedin: "https://www.linkedin.com/in/ignaciolede/",
+        github:   "https://github.com/ignaciolede",
+        instagram: "https://www.instagram.com/ignaciolede/",
+      },
+
+      /* ── Ítems de navegación ─────────────────────────────────── */
+      navItems: [
+        { label: "Inicio",       href: "#inicio"      },
+        { label: "Sobre Mí",    href: "#sobre-mi"    },
+        { label: "Proyectos",   href: "#proyectos"   },
+        { label: "Formación",    href: "#formacion"   },
+        { label: "Habilidades", href: "#habilidades" },
+        { label: "Contacto",    href: "#contacto"    },
+      ],
+    };
+  </script>
+
+  <!-- ============================================================ -->
+  <!--  ESTILOS GLOBALES                                            -->
+  <!-- ============================================================ -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background-color: #E6E6E6;
+      color: #404E3B;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3, h4, h5, h6 { font-family: 'Archivo', sans-serif; }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar             { width: 5px; }
+    ::-webkit-scrollbar-track       { background: #E6E6E6; }
+    ::-webkit-scrollbar-thumb       { background: #7B9669; border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #404E3B; }
+
+    /* ── Glassmorphism ──────────────────────────────────────────── */
+    .glass {
+      background: rgba(186, 200, 177, 0.22);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+      border: 1px solid rgba(186, 200, 177, 0.38);
+    }
+
+    /* ── Gradient text ──────────────────────────────────────────── */
+    .text-gradient {
+      background: linear-gradient(135deg, #404E3B 0%, #7B9669 65%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* ── Section label ──────────────────────────────────────────── */
+    .label {
+      display: inline-block;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #7B9669;
+    }
+
+    /* ── Divider ────────────────────────────────────────────────── */
+    .divider {
+      width: 44px;
+      height: 3px;
+      background: linear-gradient(90deg, #7B9669, transparent);
+      border-radius: 2px;
+      margin-top: 10px;
+    }
+
+    /* ── Hero background blobs ──────────────────────────────────── */
+    .blob {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(ellipse, #BAC8B1 0%, transparent 72%);
+      pointer-events: none;
+      animation: blobFloat 10s ease-in-out infinite;
+    }
+    @keyframes blobFloat {
+      0%, 100% { transform: scale(1) translateY(0);   opacity: .45; }
+      50%       { transform: scale(1.1) translateY(-18px); opacity: .65; }
+    }
+
+    /* ── Portrait ring ──────────────────────────────────────────── */
+    .portrait-ring {
+      background: conic-gradient(from 0deg, #7B9669 0%, #BAC8B1 35%, #7B9669 55%, #404E3B 80%, #7B9669 100%);
+      animation: ringRotate 10s linear infinite;
+    }
+    @keyframes ringRotate { to { transform: rotate(360deg); } }
+
+    /* ── Availability pulse ─────────────────────────────────────── */
+    .pulse-dot {
+      width: 8px; height: 8px;
+      background: #7B9669;
+      border-radius: 50%;
+      animation: pulse 2.2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: .55; transform: scale(1.45); }
+    }
+
+    /* ── Buttons ────────────────────────────────────────────────── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: .88rem;
+      border-radius: 10px;
+      padding: 11px 26px;
+      cursor: pointer;
+      border: none;
+      text-decoration: none;
+      transition: background .22s ease, transform .18s ease, box-shadow .22s ease, color .18s ease, border-color .18s ease;
+      white-space: nowrap;
+    }
+    .btn-solid {
+      background: #7B9669;
+      color: #fff;
+    }
+    .btn-solid:hover {
+      background: #404E3B;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(123,150,105,.32);
+    }
+    .btn-outline {
+      background: transparent;
+      color: #404E3B;
+      border: 2px solid #6C8480;
+    }
+    .btn-outline:hover {
+      border-color: #7B9669;
+      color: #7B9669;
+      background: rgba(123,150,105,.08);
+      transform: translateY(-2px);
+    }
+
+    /* ── Nav link ───────────────────────────────────────────────── */
+    .nav-link {
+      position: relative;
+      font-size: .875rem;
+      font-weight: 500;
+      color: #404E3B;
+      text-decoration: none;
+      padding: 4px 0;
+      transition: color .2s ease;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -3px; left: 0;
+      width: 0; height: 2px;
+      background: #7B9669;
+      border-radius: 1px;
+      transition: width .24s cubic-bezier(.25,.46,.45,.94);
+    }
+    .nav-link:hover             { color: #7B9669; }
+    .nav-link:hover::after      { width: 100%; }
+
+    /* ── Project card ───────────────────────────────────────────── */
+    .project-card {
+      transition: transform .35s cubic-bezier(.25,.46,.45,.94),
+                  box-shadow .35s cubic-bezier(.25,.46,.45,.94),
+                  border-color .25s ease;
+    }
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 28px 52px rgba(64,78,59,.14);
+      border-color: rgba(123,150,105,.45) !important;
+    }
+    .project-card:hover .card-thumb {
+      transform: scale(1.07);
+    }
+    .card-thumb {
+      transition: transform .5s cubic-bezier(.25,.46,.45,.94);
+    }
+
+    /* ── Timeline ───────────────────────────────────────────────── */
+    .tl-dot {
+      width: 14px; height: 14px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: #7B9669;
+      border: 3px solid #E6E6E6;
+      box-shadow: 0 0 0 2.5px #7B9669;
+      margin-top: 6px;
+    }
+    .tl-line {
+      position: absolute;
+      left: 6px; top: 20px; bottom: -20px;
+      width: 2px;
+      background: linear-gradient(to bottom, #7B9669 0%, rgba(123,150,105,.1) 100%);
+    }
+
+    /* ── Skill bar ──────────────────────────────────────────────── */
+    .skill-fill {
+      transition: width 1.3s cubic-bezier(.25,.46,.45,.94);
+    }
+
+    /* ── Skill / tool tag ───────────────────────────────────────── */
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 15px;
+      border-radius: 8px;
+      font-size: .845rem;
+      font-weight: 500;
+      color: #404E3B;
+      background: rgba(186,200,177,.38);
+      border: 1px solid rgba(108,132,128,.22);
+      transition: all .22s ease;
+      cursor: default;
+    }
+    .tag:hover {
+      background: rgba(123,150,105,.2);
+      border-color: rgba(123,150,105,.4);
+      transform: translateY(-2px);
+    }
+
+    /* ── Badge ──────────────────────────────────────────────────── */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 11px;
+      border-radius: 99px;
+      font-size: .72rem;
+      font-weight: 700;
+      color: #404E3B;
+      background: rgba(123,150,105,.14);
+      border: 1px solid rgba(123,150,105,.3);
+    }
+
+    /* ── Social icon ────────────────────────────────────────────── */
+    .social-btn {
+      width: 40px; height: 40px;
+      display: flex; align-items: center; justify-content: center;
+      border-radius: 10px;
+      border: 1.5px solid #6C8480;
+      color: #6C8480;
+      text-decoration: none;
+      transition: all .22s ease;
+      cursor: pointer;
+    }
+    .social-btn:hover {
+      border-color: #7B9669;
+      color: #7B9669;
+      background: rgba(123,150,105,.1);
+      transform: translateY(-2px);
+    }
+
+    /* ── Form input ─────────────────────────────────────────────── */
+    .inp {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 10px;
+      border: 1.5px solid rgba(108,132,128,.38);
+      background: rgba(186,200,177,.18);
+      color: #404E3B;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: .915rem;
+      outline: none;
+      transition: border-color .22s ease, box-shadow .22s ease;
+    }
+    .inp:focus {
+      border-color: #7B9669;
+      box-shadow: 0 0 0 3.5px rgba(123,150,105,.14);
+    }
+    .inp::placeholder { color: #6C8480; }
+
+    /* ── Card glass surface ─────────────────────────────────────── */
+    .card-surface {
+      background: rgba(255,255,255,.28);
+      border: 1px solid rgba(186,200,177,.5);
+      border-radius: 20px;
+    }
+
+    /* ── Nav shadow on scroll ───────────────────────────────────── */
+    .nav-shadow { box-shadow: 0 8px 32px rgba(64,78,59,.11); }
+
+    /* ── Mobile menu transition ─────────────────────────────────── */
+    #mobile-menu {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height .35s cubic-bezier(.25,.46,.45,.94), opacity .3s ease;
+    }
+    #mobile-menu.open {
+      max-height: 420px;
+      opacity: 1;
+    }
+
+    /* ── Timeline scroll animation ─────────────────────────────────── */
+    .tl-item {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .tl-item.tl-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Reduced motion ─────────────────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+      [data-aos] { opacity: 1 !important; transform: none !important; transition: none !important; }
+    }
+  </style>
+</head>
+
+<body class="bg-fondo text-primario font-body">
+
+<!-- ================================================================ -->
+<!-- NAV — Glassmorphism flotante                                      -->
+<!-- ================================================================ -->
+<header class="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[calc(100%-2rem)] max-w-5xl">
+
+  <nav id="main-nav" class="glass rounded-2xl px-5 py-3.5 flex items-center justify-between transition-all duration-300">
+
+    <!-- Logotipo / Iniciales -->
+    <a href="#inicio" class="flex items-center gap-2.5 group flex-shrink-0">
+      <div id="nav-logo" class="w-8 h-8 rounded-lg bg-acento flex items-center justify-center">
+        <span id="nav-initials" class="text-white font-heading font-bold text-sm leading-none"></span>
+      </div>
+      <span id="nav-name" class="font-heading font-semibold text-primario text-sm hidden sm:block"></span>
+    </a>
+
+    <!-- Ítems desktop -->
+    <ul id="nav-links" class="hidden md:flex items-center gap-5"></ul>
+
+    <!-- Acciones -->
+    <div class="flex items-center gap-3">
+      <a href="#contacto" class="btn btn-solid py-2 px-4 text-xs hidden sm:inline-flex">
+        Contactar
+      </a>
+      <button id="menu-btn" class="md:hidden p-2 rounded-lg hover:bg-tarjeta/40 transition-colors cursor-pointer" aria-label="Abrir menú de navegación" aria-expanded="false">
+        <svg id="menu-icon-open"  class="w-5 h-5 text-primario" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        <svg id="menu-icon-close" class="w-5 h-5 text-primario hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Menú móvil -->
+  <div id="mobile-menu" class="glass rounded-2xl mt-2">
+    <ul id="mobile-nav-links" class="py-3 px-4 flex flex-col gap-0.5"></ul>
+  </div>
+</header>
+
+
+<!-- ================================================================ -->
+<!-- HERO                                                              -->
+<!-- ================================================================ -->
+<section id="inicio" class="min-h-screen flex flex-col justify-center relative overflow-hidden pt-28 pb-20">
+
+  <!-- Blobs decorativos -->
+  <div class="blob w-[480px] h-[480px] -top-20 -right-40"  style="animation-delay: 0s;"></div>
+  <div class="blob w-[320px] h-[320px] bottom-10 -left-28" style="animation-delay: -5s;"></div>
+
+  <div class="max-w-6xl mx-auto px-6 w-full">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 xl:gap-16 items-center">
+
+      <!-- ── Texto ── -->
+      <div class="lg:col-span-7 order-2 lg:order-1" data-aos="fade-right" data-aos-duration="800">
+
+        <!-- Disponibilidad -->
+        <div class="flex items-center gap-2.5 mb-7">
+          <div class="pulse-dot"></div>
+          <span id="hero-disponibilidad" class="text-sm font-medium text-secundario"></span>
+        </div>
+
+        <!-- Nombre -->
+        <h1 class="font-heading font-black leading-[1.04] mb-5">
+          <span id="hero-nombre"   class="block text-5xl sm:text-6xl xl:text-7xl text-primario"></span>
+          <span id="hero-apellido" class="block text-5xl sm:text-6xl xl:text-7xl text-gradient"></span>
+        </h1>
+
+        <!-- Título profesional -->
+        <div class="flex items-center gap-3 mb-6">
+          <span class="w-8 h-px bg-acento inline-block flex-shrink-0"></span>
+          <p id="hero-titulo" class="text-secundario font-medium text-base sm:text-lg"></p>
+        </div>
+
+        <!-- Descripción -->
+        <p id="hero-descripcion" class="text-primario/68 text-base sm:text-lg leading-[1.75] max-w-xl mb-9"></p>
+
+        <!-- Botones -->
+        <div class="flex flex-wrap gap-4 mb-10">
+          <a href="#proyectos" class="btn btn-solid">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg>
+            Ver Proyectos
+          </a>
+          <a href="#contacto" class="btn btn-outline">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+            Hablemos
+          </a>
+        </div>
+
+        <!-- Redes sociales -->
+        <div id="hero-socials" class="flex items-center gap-3"></div>
+      </div>
+
+      <!-- ── Retrato ── -->
+      <div class="lg:col-span-5 order-1 lg:order-2 flex justify-center lg:justify-end" data-aos="fade-left" data-aos-duration="800" data-aos-delay="180">
+        <div class="relative">
+          <!-- Anillo giratorio -->
+          <div class="portrait-ring absolute rounded-[28px] p-[2.5px]"
+               style="inset: -6px; z-index: 0;"></div>
+
+          <!-- Foto -->
+          <div class="relative w-64 h-76 sm:w-72 sm:h-88 md:w-80 md:h-96 rounded-3xl overflow-hidden bg-tarjeta" style="z-index:1;">
+            <img id="hero-foto"
+                 src=""
+                 alt="Foto de perfil"
+                 class="w-full h-full object-cover"
+                 loading="eager">
+            <!-- Gradiente inferior -->
+            <div class="absolute inset-0 bg-gradient-to-t from-primario/50 via-transparent to-transparent"></div>
+          </div>
+
+          <!-- Badge ubicación -->
+          <div class="absolute -bottom-4 -left-4 glass rounded-xl px-4 py-2.5 flex items-center gap-2" style="z-index:2;">
+            <svg class="w-4 h-4 text-acento flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+            <span id="hero-ubicacion" class="text-sm font-semibold text-primario"></span>
+          </div>
+
+          <!-- Badge proyectos -->
+          <div class="absolute -top-4 -right-4 glass rounded-xl px-4 py-2.5 text-center" style="z-index:2;">
+            <div id="hero-stats-num" class="font-heading font-black text-2xl text-acento leading-none"></div>
+            <div class="text-xs font-semibold text-secundario mt-0.5">Proyecto</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================================ -->
+<!-- SOBRE MÍ                                                          -->
+<!-- ================================================================ -->
+<section id="sobre-mi" class="pt-24 pb-12">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-14 xl:gap-20 items-center">
+
+      <!-- Estadísticas -->
+      <div class="lg:col-span-4">
+        <div id="sobre-stats" class="space-y-4"></div>
+      </div>
+
+      <!-- Texto -->
+      <div class="lg:col-span-8" data-aos="fade-left" data-aos-duration="700" data-aos-delay="120">
+        <span class="label">Sobre Mí</span>
+        <div class="divider mb-7"></div>
+        <h2 class="font-heading font-black text-4xl sm:text-5xl text-primario leading-[1.1] mb-6">
+          La persona<br/>detrás del código
+        </h2>
+        <div id="sobre-parrafos" class="space-y-4 text-primario/70 text-base sm:text-lg leading-[1.78]"></div>
+        <div class="mt-9">
+          <a href="CV_Ignacio_Lederhos.pdf" download="CV_Ignacio_Lederhos.pdf" class="btn btn-solid">
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+            Descargar CV
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================================ -->
+<!-- PROYECTOS                                                         -->
+<!-- ================================================================ -->
+<section id="proyectos" class="pt-12 pb-24" style="background: rgba(186,200,177,.2);">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- Encabezado -->
+    <div class="text-center mb-16" data-aos="fade-up" data-aos-duration="600">
+      <span class="label">Mis Trabajos</span>
+      <div class="divider mx-auto mb-5" style="margin-left:auto;margin-right:auto;"></div>
+      <h2 class="font-heading font-black text-4xl sm:text-5xl text-primario mt-2">
+        Proyectos <span class="text-gradient">Destacados</span>
+      </h2>
+      <p class="text-secundario text-base sm:text-lg mt-4 max-w-lg mx-auto leading-relaxed">
+        Una selección de los trabajos que mejor reflejan mi forma de pensar y construir.
+      </p>
+    </div>
+
+    <!-- Grid de tarjetas -->
+    <div id="proyectos-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8"></div>
+  </div>
+</section>
+
+
+<!-- ================================================================ -->
+<!-- FORMACIÓN ACADÉMICA — Timeline                                    -->
+<!-- ================================================================ -->
+<section id="formacion" class="py-24">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 xl:gap-16">
+
+      <!-- Encabezado lateral -->
+      <div class="lg:col-span-4">
+        <span class="label">Educación</span>
+        <div class="divider mb-7"></div>
+        <h2 class="font-heading font-black text-4xl sm:text-5xl text-primario leading-[1.1]">
+          Mi<br/>Formación<br/><span class="text-gradient">Académica</span>
+        </h2>
+        <p class="text-secundario mt-6 text-base sm:text-lg leading-relaxed">
+          Carreras, cursos y certificaciones que construyen mi base técnica y profesional.
+        </p>
+      </div>
+
+      <!-- Timeline de formación -->
+      <div class="lg:col-span-8">
+        <div id="formacion-timeline" class="space-y-0"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================================ -->
+<!-- HABILIDADES                                                       -->
+<!-- ================================================================ -->
+<section id="habilidades" class="py-24" style="background: rgba(186,200,177,.2);">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <!-- Encabezado -->
+    <div class="text-center mb-16">
+      <span class="label">Competencias</span>
+      <div class="divider mx-auto mb-5" style="margin-left:auto;margin-right:auto;"></div>
+      <h2 class="font-heading font-black text-4xl sm:text-5xl text-primario mt-2">
+        Mi Stack de <span class="text-gradient">Habilidades</span>
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 xl:gap-8">
+
+      <!-- Habilidades técnicas -->
+      <div class="card-surface p-8">
+        <div class="flex items-center gap-3 mb-7">
+          <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(123,150,105,.14);">
+            <svg class="w-5 h-5 text-acento" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 7.5l3 2.25-3 2.25m4.5 0h3m-9 8.25h13.5A2.25 2.25 0 0021 18V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v12a2.25 2.25 0 002.25 2.25z"/></svg>
+          </div>
+          <h3 class="font-heading font-bold text-xl text-primario">Habilidades Técnicas</h3>
+        </div>
+        <div id="skills-tecnicas" class="space-y-5"></div>
+      </div>
+
+      <div class="flex flex-col gap-6">
+
+        <!-- Habilidades blandas -->
+        <div class="card-surface p-8">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(123,150,105,.14);">
+              <svg class="w-5 h-5 text-acento" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/></svg>
+            </div>
+            <h3 class="font-heading font-bold text-xl text-primario">Habilidades Blandas</h3>
+          </div>
+          <div id="skills-blandas" class="flex flex-wrap gap-2"></div>
+        </div>
+
+        <!-- Herramientas -->
+        <div class="card-surface p-8">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(123,150,105,.14);">
+              <svg class="w-5 h-5 text-acento" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085m-1.745 1.437L5.909 7.5H4.5L2.25 3.75l1.5-1.5L7.5 4.5v1.409l4.26 4.26m-1.745 1.437l1.745-1.437m6.615 8.206L15.75 15.75M4.867 19.125h.008v.008h-.008v-.008z"/></svg>
+            </div>
+            <h3 class="font-heading font-bold text-xl text-primario">Herramientas</h3>
+          </div>
+          <div id="skills-herramientas" class="flex flex-wrap gap-2"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================================ -->
+<!-- CONTACTO                                                          -->
+<!-- ================================================================ -->
+<section id="contacto" class="py-24">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 xl:gap-16">
+
+      <!-- Info de contacto -->
+      <div class="lg:col-span-5">
+        <span class="label">Contacto</span>
+        <div class="divider mb-7"></div>
+        <h2 class="font-heading font-black text-4xl sm:text-5xl text-primario leading-[1.1] mb-6">
+          ¿Tenés un<br/>proyecto en<br/><span class="text-gradient">mente?</span>
+        </h2>
+        <p class="text-secundario text-base sm:text-lg leading-relaxed mb-9">
+          Cuéntame de qué se trata. Estoy disponible para proyectos freelance, colaboraciones y oportunidades full-time.
+        </p>
+
+        <div class="space-y-4">
+          <!-- Email -->
+          <a id="contact-email-link" href="" class="flex items-center gap-4 p-4 rounded-2xl card-surface hover:border-acento/50 transition-all duration-220 group cursor-pointer" style="text-decoration:none; color: inherit;">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 transition-colors duration-220 group-hover:bg-acento/20" style="background:rgba(123,150,105,.12);">
+              <svg class="w-5 h-5 text-acento" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+            </div>
+            <div>
+              <p class="text-xs font-semibold text-secundario mb-0.5">Email</p>
+              <p id="contact-email-text" class="font-semibold text-primario group-hover:text-acento transition-colors duration-220 text-sm"></p>
+            </div>
+          </a>
+
+          <!-- Teléfono -->
+          <div class="flex items-center gap-4 p-4 rounded-2xl card-surface">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0" style="background:rgba(123,150,105,.12);">
+              <svg class="w-5 h-5 text-acento" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/></svg>
+            </div>
+            <div>
+              <p class="text-xs font-semibold text-secundario mb-0.5">Teléfono</p>
+              <p id="contact-tel-text" class="font-semibold text-primario text-sm"></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Redes -->
+        <div id="contact-socials" class="flex items-center gap-3 mt-8"></div>
+      </div>
+
+      <!-- Formulario -->
+      <div class="lg:col-span-7">
+        <div class="card-surface p-8 sm:p-10">
+          <h3 class="font-heading font-bold text-2xl text-primario mb-7">Enviame un mensaje</h3>
+          <form id="contact-form" class="space-y-5" novalidate>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <div>
+                <label for="inp-nombre" class="block text-sm font-semibold text-primario mb-2">Nombre</label>
+                <input type="text" id="inp-nombre" class="inp" placeholder="Tu nombre" required autocomplete="name">
+              </div>
+              <div>
+                <label for="inp-email" class="block text-sm font-semibold text-primario mb-2">Correo electrónico</label>
+                <input type="email" id="inp-email" class="inp" placeholder="tu@email.com" required autocomplete="email">
+              </div>
+            </div>
+            <div>
+              <label for="inp-asunto" class="block text-sm font-semibold text-primario mb-2">Asunto</label>
+              <input type="text" id="inp-asunto" class="inp" placeholder="¿En qué te puedo ayudar?">
+            </div>
+            <div>
+              <label for="inp-mensaje" class="block text-sm font-semibold text-primario mb-2">Mensaje</label>
+              <textarea id="inp-mensaje" rows="5" class="inp resize-none" placeholder="Cuéntame sobre tu proyecto o propuesta…" required></textarea>
+            </div>
+            <button type="submit" id="form-btn" class="btn btn-solid w-full justify-center">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg>
+              Enviar Mensaje
+            </button>
+            <p id="form-feedback" class="text-center text-sm font-semibold hidden"></p>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================================================================ -->
+<!-- FOOTER                                                            -->
+<!-- ================================================================ -->
+<footer style="border-top: 1px solid rgba(186,200,177,.55);" class="py-10">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+
+    <!-- Logo -->
+    <a href="#inicio" class="flex items-center gap-2.5">
+      <div class="w-8 h-8 rounded-lg bg-acento flex items-center justify-center">
+        <span id="footer-initials" class="text-white font-heading font-bold text-sm leading-none"></span>
+      </div>
+      <span id="footer-name" class="font-heading font-semibold text-primario text-sm"></span>
+    </a>
+
+    <!-- Copyright -->
+    <p class="text-secundario text-sm text-center">
+      © <span id="footer-year"></span> <span id="footer-fullname"></span>. Todos los derechos reservados.
+    </p>
+
+    <!-- Redes -->
+    <div id="footer-socials" class="flex items-center gap-3"></div>
+  </div>
+</footer>
+
+
+<!-- ================================================================ -->
+<!-- SCRIPTS — Render Engine + Interacciones                          -->
+<!-- ================================================================ -->
+<script>
+  /* ─────────────────────────────────────────────────────────────────
+     ICONOS SVG PARA REDES SOCIALES
+  ───────────────────────────────────────────────────────────────── */
+  const SOCIAL_SVG = {
+    linkedin: `<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>`,
+    github:   `<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>`,
+    instagram: `<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>`,
+  };
+
+  /* ─────────────────────────────────────────────────────────────────
+     HELPERS
+  ───────────────────────────────────────────────────────────────── */
+  function initials(n, a) {
+    return ((n.replace(/[\[\]]/g,'').trim()[0] || '') + (a.replace(/[\[\]]/g,'').trim()[0] || '')).toUpperCase() || 'TN';
+  }
+
+  function renderSocials(containerId, redes) {
+    const el = document.getElementById(containerId);
+    if (!el) return;
+    Object.entries(redes).forEach(([net, url]) => {
+      if (!SOCIAL_SVG[net]) return;
+      const a = document.createElement('a');
+      a.href = url;
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      a.className = 'social-btn';
+      a.setAttribute('aria-label', net.charAt(0).toUpperCase() + net.slice(1));
+      a.innerHTML = SOCIAL_SVG[net];
+      el.appendChild(a);
+    });
+  }
+
+  /* ─────────────────────────────────────────────────────────────────
+     NAVEGACIÓN
+  ───────────────────────────────────────────────────────────────── */
+  function renderNav() {
+    const ini = initials(CONFIG.personal.nombre, CONFIG.personal.apellido);
+    document.getElementById('nav-initials').textContent = ini;
+    document.getElementById('nav-name').textContent =
+      CONFIG.personal.nombre + ' ' + CONFIG.personal.apellido;
+
+    const ul  = document.getElementById('nav-links');
+    const ulM = document.getElementById('mobile-nav-links');
+
+    CONFIG.navItems.forEach(item => {
+      const li = document.createElement('li');
+      li.innerHTML = `<a href="${item.href}" class="nav-link">${item.label}</a>`;
+      ul.appendChild(li);
+
+      const liM = document.createElement('li');
+      liM.innerHTML = `<a href="${item.href}"
+        class="block px-3 py-2.5 rounded-xl text-sm font-medium text-primario hover:text-acento hover:bg-tarjeta/35 transition-all duration-200 cursor-pointer"
+        style="color:#404E3B;">${item.label}</a>`;
+      ulM.appendChild(liM);
+    });
+  }
+
+  /* ─────────────────────────────────────────────────────────────────
+     HERO
+  ───────────────────────────────────────────────────────────────── */
+  function renderHero() {
+    const p = CONFIG.personal;
+    document.getElementById('hero-nombre').textContent      = p.nombre;
+    document.getElementById('hero-apellido').textContent    = p.apellido;
+    document.getElementById('hero-titulo').textContent      = p.titulo;
+    document.getElementById('hero-descripcion').textContent = p.descripcion;
+    document.getElementById('hero-ubicacion').textContent   = p.ubicacion;
+    document.getElementById('hero-disponibilidad').textContent = p.disponibilidad;
+    document.getElementById('hero-foto').src = p.fotoPerfil;
+    document.getElementById('hero-foto').alt = `Foto de perfil de ${p.nombre} ${p.apellido}`;
+    document.getElementById('hero-stats-num').textContent   = '1';
+    renderSocials('hero-socials', CONFIG.redes);
+  }
+
+  /* ─────────────────────────────────────────────────────────────────
+     SOBRE MÍ
+  ───────────────────────────────────────────────────────────────── */
+  function renderSobreMi() {
+    const sm = CONFIG.sobreMi;
+    const statsEl = document.getElementById('sobre-stats');
+
+    [sm.dato1].forEach((d, i) => {
+      const div = document.createElement('div');
+      div.setAttribute('data-aos', 'fade-right');
+      div.setAttribute('data-aos-duration', '700');
+      div.setAttribute('data-aos-delay', String(i * 110));
+      div.innerHTML = `
+        <div class="card-surface p-7">
+          <div class="font-heading font-black text-5xl leading-none mb-2" style="color:#7B9669;">${d.valor}</div>
+          <div class="text-secundario font-medium text-sm">${d.label}</div>
+        </div>`;
+      statsEl.appendChild(div);
+    });
+
+    const parEl = document.getElementById('sobre-parrafos');
+    [sm.parrafo1, sm.parrafo2].forEach(txt => {
+      const p = document.createElement('p');
+      p.textContent = txt;
+      parEl.appendChild(p);
+    });
+  }
+
+  /* ─────────────────────────────────────────────────────────────────
+     PROYECTOS
+  ───────────────────────────────────────────────────────────────── */
+  function renderProyectos() {
+    const grid = document.getElementById('proyectos-grid');
+    CONFIG.proyectos.forEach((proj, i) => {
+      const stackHtml = proj.stack
+        .map(t => `<span class="badge">${t}</span>`).join('');
+
+      const card = document.createElement('article');
+      card.className = 'project-card card-surface overflow-hidden cursor-pointer';
+      card.setAttribute('data-aos', 'fade-up');
+      card.setAttribute('data-aos-delay', String(i * 90));
+      card.setAttribute('data-aos-duration', '650');
+      card.innerHTML = `
+        <div class="aspect-video overflow-hidden relative">
+          <img src="${proj.imgSrc}"
+               alt="Vista previa del proyecto ${proj.titulo}"
+               class="card-thumb w-full h-full object-cover"
+               loading="lazy">
+          <div class="absolute inset-0 bg-gradient-to-t from-primario/55 via-transparent to-transparent"></div>
+          <span class="absolute top-3 right-3 badge" style="background:rgba(230,230,230,.85);backdrop-filter:blur(6px);">${proj.categoria}</span>
+        </div>
+        <div class="p-6">
+          <h3 class="font-heading font-bold text-lg text-primario mb-2">${proj.titulo}</h3>
+          <p class="text-secundario text-sm leading-relaxed mb-4">${proj.descripcion}</p>
+          <div class="flex flex-wrap gap-1.5 mb-5">${stackHtml}</div>
+          <div class="flex items-center gap-3">
+            <a href="${proj.linkDemo}"   class="btn btn-solid   text-xs py-2 px-4 flex-1 justify-center">
+              <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+              Demo
+            </a>
+            <a href="${proj.linkCodigo}" class="btn btn-outline text-xs py-2 px-4 flex-1 justify-center">
+              <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg>
+              Código
+            </a>
+          </div>
+        </div>`;
+      grid.appendChild(card);
+    });
+  }
+
+  /* ─────────────────────────────────────────────────────────────────
+     FORMACIÓN ACADÉMICA
+  ───────────────────────────────────────────────────────────────── */
+  function renderFormacion() {
+    const container = document.getElementById('formacion-timeline');
+    CONFIG.formacion.forEach((item, i) => {
+      const isLast = i === CONFIG.formacion.length - 1;
+      const el     = document.createElement('div');
+      el.className = 'tl-item relative flex gap-5 pb-8';
+
+      const logrosHtml = item.logros
+        .map(l => `<li class="flex items-start gap-2 text-secundario text-sm leading-relaxed">
+          <svg class="w-3.5 h-3.5 mt-0.5 flex-shrink-0" style="color:#7B9669;" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/></svg>
+          <span>${l}</span>
+        </li>`)
+        .join('');
+
+      el.innerHTML = `
+        <div class="relative flex-shrink-0 pt-1">
+          <div class="tl-dot"></div>
+          ${!isLast ? '<div class="tl-line"></div>' : ''}
+        </div>
+        <div class="flex-1 pb-1">
+          <div class="card-surface p-6 hover:border-acento/40 transition-all duration-280">
+            <div class="flex flex-wrap items-start justify-between gap-3 mb-3">
+              <div>
+                <h3 class="font-heading font-bold text-base text-primario">${item.carrera}</h3>
+                <p class="font-semibold text-sm mt-0.5" style="color:#7B9669;">${item.institucion}</p>
+              </div>
+              <span class="badge flex-shrink-0">${item.estado}</span>
+            </div>
+            <ul class="space-y-1.5">${logrosHtml}</ul>
+          </div>
+        </div>`;
+      container.appendChild(el);
+    });
+
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          const delay = Array.from(container.children).indexOf(e.target) * 130;
+          setTimeout(() => e.target.classList.add('tl-visible'), delay);
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    container.querySelectorAll('.tl-item').forEach(el => obs.observe(el));
+  }
+
+  /* ─────────────────────────────────────────────────────────────────
+     HABILIDADES
+  ───────────────────────────────────────────────────────────────── */
+  function renderSkills() {
+    /* Técnicas */
+    const techEl = document.getElementById('skills-tecnicas');
+    CONFIG.habilidades.tecnicas.forEach(skill => {
+      const div = document.createElement('div');
+      div.innerHTML = `
+        <div class="flex justify-between items-center mb-1.5">
+          <span class="text-sm font-semibold text-primario">${skill.nombre}</span>
+          <span class="text-xs font-bold" style="color:#7B9669;">${skill.nivel}%</span>
+        </div>
+        <div class="h-2 rounded-full overflow-hidden" style="background:rgba(186,200,177,.5);">
+          <div class="h-full rounded-full skill-fill"
+               style="width:0%; background: linear-gradient(90deg, #7B9669, #404E3B);"
+               data-target="${skill.nivel}"></div>
+        </div>`;
+      techEl.appendChild(div);
+    });
+
+    /* Blandas */
+    const blandEl = document.getElementById('skills-blandas');
+    CONFIG.habilidades.blandas.forEach(s => {
+      const span = document.createElement('span');
+      span.className = 'tag';
+      span.textContent = s;
+      blandEl.appendChild(span);
+    });
+
+    /* Herramientas */
+    const toolEl = document.getElementById('skills-herramientas');
+    CONFIG.habilidades.herramientas.forEach(t => {
+      const span = document.createElement('span');
+      span.className = 'tag';
+      span.textContent = t;
+      toolEl.appendChild(span);
+    });
+  }
+
+  /* ─────────────────────────────────────────────────────────────────
+     CONTACTO
+  ───────────────────────────────────────────────────────────────── */
+  function renderContacto() {
+    const p = CONFIG.personal;
+    document.getElementById('contact-email-link').href = `mailto:${p.email}`;
+    document.getElementById('contact-email-text').textContent = p.email;
+    document.getElementById('contact-tel-text').textContent   = p.telefono;
+    renderSocials('contact-socials', CONFIG.redes);
+  }
+
+  /* ─────────────────────────────────────────────────────────────────
+     FOOTER
+  ───────────────────────────────────────────────────────────────── */
+  function renderFooter() {
+    const p   = CONFIG.personal;
+    const ini = initials(p.nombre, p.apellido);
+    document.getElementById('footer-initials').textContent = ini;
+    document.getElementById('footer-name').textContent     = `${p.nombre} ${p.apellido}`;
+    document.getElementById('footer-year').textContent     = new Date().getFullYear();
+    document.getElementById('footer-fullname').textContent = `${p.nombre} ${p.apellido}`;
+    renderSocials('footer-socials', CONFIG.redes);
+  }
+
+  /* ─────────────────────────────────────────────────────────────────
+     MENÚ MÓVIL
+  ───────────────────────────────────────────────────────────────── */
+  (function setupMobileMenu() {
+    const btn   = document.getElementById('menu-btn');
+    const menu  = document.getElementById('mobile-menu');
+    const iOpen = document.getElementById('menu-icon-open');
+    const iClose= document.getElementById('menu-icon-close');
+    let open = false;
+
+    btn.addEventListener('click', () => {
+      open = !open;
+      menu.classList.toggle('open', open);
+      iOpen.classList.toggle('hidden', open);
+      iClose.classList.toggle('hidden', !open);
+      btn.setAttribute('aria-expanded', String(open));
+    });
+
+    document.getElementById('mobile-nav-links').addEventListener('click', e => {
+      if (e.target.tagName === 'A') {
+        open = false;
+        menu.classList.remove('open');
+        iOpen.classList.remove('hidden');
+        iClose.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+
+  /* ─────────────────────────────────────────────────────────────────
+     NAV SCROLL SHADOW
+  ───────────────────────────────────────────────────────────────── */
+  const mainNav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    mainNav.classList.toggle('nav-shadow', window.scrollY > 24);
+  }, { passive: true });
+
+  /* ─────────────────────────────────────────────────────────────────
+     SKILL BARS — Intersection Observer
+  ───────────────────────────────────────────────────────────────── */
+  function activateSkillBars() {
+    const fills = document.querySelectorAll('.skill-fill');
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.width = e.target.dataset.target + '%';
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.35 });
+    fills.forEach(f => obs.observe(f));
+  }
+
+  /* ─────────────────────────────────────────────────────────────────
+     FORMULARIO DE CONTACTO
+  ───────────────────────────────────────────────────────────────── */
+  window.addEventListener('load', () => {
+    renderNav();
+    renderHero();
+    renderSobreMi();
+    renderProyectos();
+    renderFormacion();
+    renderSkills();
+    renderContacto();
+    renderFooter();
+
+    try {
+      AOS.init({
+        duration: 680,
+        easing:   'ease-out-cubic',
+        once:     true,
+        offset:   40,
+      });
+      AOS.refresh();
+    } catch(e) { console.warn('AOS no disponible:', e); }
+
+    setTimeout(activateSkillBars, 600);
+
+    window.addEventListener('resize', () => AOS.refresh(), { passive: true });
+  });
+
+    document.getElementById('contact-form').addEventListener('submit', e => {
+      e.preventDefault();
+      const btn      = document.getElementById('form-btn');
+      const feedback = document.getElementById('form-feedback');
+
+      btn.disabled    = true;
+      btn.textContent = 'Enviando…';
+
+      setTimeout(() => {
+        feedback.textContent = '¡Mensaje enviado! Te respondo a la brevedad.';
+        feedback.className   = 'text-center text-sm font-semibold';
+        feedback.style.color = '#7B9669';
+        feedback.classList.remove('hidden');
+        btn.disabled = false;
+        btn.innerHTML = `<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg> Enviar Mensaje`;
+        e.target.reset();
+        setTimeout(() => { feedback.classList.add('hidden'); }, 5000);
+      }, 1100);
+    });
+</script>
+
+</body>
+</html>
