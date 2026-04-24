@@ -68,7 +68,7 @@
       sobreMi: {
         parrafo1: "Soy un estudiante de la Tecnicatura en Programacion en la UTN y programador en formacion enfocado en la creación de soluciones digitales donde la lógica y la innovación convergen. Mi stack principal incluye HTML, CSS y JavaScript, con una sólida base en C# y arquitectura de software.",
         parrafo2: "Lo que realmente define mi flujo de trabajo es la productividad aumentada por IA. Me especializo en integrar herramientas avanzadas como Claude para optimizar el ciclo de desarrollo, permitiéndome entregar proyectos escalables y prolijos con una eficiencia muy superior a la media. No solo escribo código; diseño sistemas inteligentes utilizando lo último en tecnología para resolver problemas complejos en tiempo récord. Cuando no estoy construyendo productos digitales, aboco mi vida a estar al servicio en mi voluntariado en Scouts de Argentina, hace mas de 16 años.",
-        dato1:    { valor: "1",  label: "Proyecto Completado" },
+        dato1:    { valor: "2",  label: "Proyectos Completados" },
       },
 
       /* ── Proyectos ───────────────────────────────────────────── */
@@ -157,19 +157,19 @@
           { nombre: "[AI]",            nivel: 85 },
         ],
         blandas: [
-          "[Liderazgo de equipos]",
-          "[Comunicación efectiva]",
-          "[Resolución de problemas]",
-          "[Pensamiento crítico]",
-          "[Gestión del tiempo]",
-          "[Adaptabilidad]",
-          "[Trabajo colaborativo]",
-          "[Constante aprendizaje]",
+          "Liderazgo de equipos",
+          "Comunicación efectiva",
+          "Resolución de problemas",
+          "Pensamiento crítico",
+          "Gestión del tiempo",
+          "Adaptabilidad",
+          "Trabajo colaborativo",
+          "Constante aprendizaje",
         ],
         herramientas: [
-          "[VS Code]", "[Git / GitHub]",
-          "[Word]",  "[Excel]",  "[Claude]",
-          "[Gemini]",
+          "VS Code", "Git / GitHub",
+          "Word",  "Excel",  "Claude",
+          "Gemini",
         ],
       },
 
@@ -614,8 +614,8 @@
 
           <!-- Badge proyectos -->
           <div class="absolute -top-4 -right-4 glass rounded-xl px-4 py-2.5 text-center" style="z-index:2;">
-            <div id="hero-stats-num" class="font-heading font-black text-2xl text-acento leading-none"></div>
-            <div class="text-xs font-semibold text-secundario mt-0.5">Proyecto</div>
+            <div id="hero-stats-num" class="font-heading font-black text-2xl text-acento leading-none">${d.valor}</div>
+            <div class="text-xs font-semibold text-secundario mt-0.5">Proyectos</div>
           </div>
         </div>
       </div>
@@ -962,6 +962,11 @@
     const sm = CONFIG.sobreMi;
     const statsEl = document.getElementById('sobre-stats');
 
+  const heroStat = document.getElementById('hero-stats-num');
+    if (heroStat) {
+      heroStat.textContent = sm.dato1.valor;
+    }
+
     [sm.dato1].forEach((d, i) => {
       const div = document.createElement('div');
       div.setAttribute('data-aos', 'fade-right');
@@ -1220,24 +1225,63 @@
     window.addEventListener('resize', () => AOS.refresh(), { passive: true });
   });
 
-    document.getElementById('contact-form').addEventListener('submit', e => {
+    const WEB3FORMS_KEY = '5d624dd9-69e6-4a92-a3b3-e650196c55e6';
+
+    document.getElementById('contact-form').addEventListener('submit', async e => {
       e.preventDefault();
       const btn      = document.getElementById('form-btn');
       const feedback = document.getElementById('form-feedback');
+      const form     = e.target;
+
+      const nombre  = document.getElementById('inp-nombre').value.trim();
+      const email   = document.getElementById('inp-email').value.trim();
+      const mensaje = document.getElementById('inp-mensaje').value.trim();
+
+      if (!nombre || !email || !mensaje) {
+        feedback.textContent = 'Por favor completá nombre, email y mensaje.';
+        feedback.className   = 'text-center text-sm font-semibold';
+        feedback.style.color = '#c0392b';
+        feedback.classList.remove('hidden');
+        return;
+      }
 
       btn.disabled    = true;
       btn.textContent = 'Enviando…';
+      feedback.classList.add('hidden');
 
-      setTimeout(() => {
-        feedback.textContent = '¡Mensaje enviado! Te respondo a la brevedad.';
-        feedback.className   = 'text-center text-sm font-semibold';
-        feedback.style.color = '#7B9669';
-        feedback.classList.remove('hidden');
-        btn.disabled = false;
-        btn.innerHTML = `<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg> Enviar Mensaje`;
-        e.target.reset();
-        setTimeout(() => { feedback.classList.add('hidden'); }, 5000);
-      }, 1100);
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            access_key: WEB3FORMS_KEY,
+            name:       nombre,
+            email:      email,
+            subject:    document.getElementById('inp-asunto').value.trim() || '(sin asunto)',
+            message:    mensaje,
+          }),
+        });
+
+        const data = await res.json();
+
+        if (data.success) {
+          feedback.textContent = '¡Mensaje enviado! Te respondo a la brevedad.';
+          feedback.style.color = '#7B9669';
+          form.reset();
+          setTimeout(() => { feedback.classList.add('hidden'); }, 5000);
+        } else {
+          feedback.textContent = 'Error al enviar. Intentá de nuevo o escribime directo al email.';
+          feedback.style.color = '#c0392b';
+        }
+      } catch {
+        feedback.textContent = 'Error de conexión. Intentá de nuevo más tarde.';
+        feedback.style.color = '#c0392b';
+      }
+
+      feedback.className = 'text-center text-sm font-semibold';
+      feedback.classList.remove('hidden');
+      btn.disabled = false;
+      btn.innerHTML = `<svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/></svg> Enviar Mensaje`;
     });
 </script>
 
