@@ -21,5 +21,9 @@
       "Bash(D:/Python312/Scripts/code-review-graph.exe install *)",
       "Bash(D:/Python312/Scripts/code-review-graph.exe build *)"
     ]
-  }
+  },
+  "enabledMcpjsonServers": [
+    "code-review-graph"
+  ],
+  "enableAllProjectMcpServers": true
 }
