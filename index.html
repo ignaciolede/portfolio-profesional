@@ -149,12 +149,12 @@
       /* ── Habilidades ─────────────────────────────────────────── */
       habilidades: {
         tecnicas: [
-          { nombre: "[JavaScript]", nivel: 60 },
-          { nombre: "[CSS]",          nivel: 60 },
-          { nombre: "[HTML]",         nivel: 70 },
-          { nombre: "[C++/C#]",           nivel: 65 },
-          { nombre: "[SQL / MySQL]",               nivel: 70 },
-          { nombre: "[AI]",            nivel: 85 },
+          { nombre: "JavaScript",  nivel: "Basico"   },
+          { nombre: "CSS",         nivel: "Basico"   },
+          { nombre: "HTML",        nivel: "Basico"     },
+          { nombre: "C++ / C#",    nivel: "Intermedio"   },
+          { nombre: "SQL / MySQL", nivel: "Intermedio"     },
+          { nombre: "AI",          nivel: "Avanzado"     },
         ],
         blandas: [
           "Liderazgo de equipos",
@@ -169,7 +169,7 @@
         herramientas: [
           "VS Code", "Git / GitHub",
           "Word",  "Excel",  "Claude",
-          "Gemini",
+          "Gemini", "SqlDeveloper","SupaBase"
         ],
       },
 
@@ -376,11 +376,6 @@
       left: 6px; top: 20px; bottom: -20px;
       width: 2px;
       background: linear-gradient(to bottom, #7B9669 0%, rgba(123,150,105,.1) 100%);
-    }
-
-    /* ── Skill bar ──────────────────────────────────────────────── */
-    .skill-fill {
-      transition: width 1.3s cubic-bezier(.25,.46,.45,.94);
     }
 
     /* ── Skill / tool tag ───────────────────────────────────────── */
@@ -1095,41 +1090,75 @@
   /* ─────────────────────────────────────────────────────────────────
      HABILIDADES
   ───────────────────────────────────────────────────────────────── */
-  function renderSkills() {
-    /* Técnicas */
+  function renderHabilidades() {
     const techEl = document.getElementById('skills-tecnicas');
-    CONFIG.habilidades.tecnicas.forEach(skill => {
+    CONFIG.habilidades.tecnicas.forEach((skill, i) => {
       const div = document.createElement('div');
+      div.style.cssText = `opacity:0; transform:translateY(14px); transition: opacity .45s ease ${i * 75}ms, transform .45s ease ${i * 75}ms;`;
       div.innerHTML = `
-        <div class="flex justify-between items-center mb-1.5">
+        <div class="flex items-center justify-between px-4 py-3 rounded-xl" style="background:rgba(186,200,177,.22); border:1px solid rgba(108,132,128,.22);">
           <span class="text-sm font-semibold text-primario">${skill.nombre}</span>
-          <span class="text-xs font-bold" style="color:#7B9669;">${skill.nivel}%</span>
-        </div>
-        <div class="h-2 rounded-full overflow-hidden" style="background:rgba(186,200,177,.5);">
-          <div class="h-full rounded-full skill-fill"
-               style="width:0%; background: linear-gradient(90deg, #7B9669, #404E3B);"
-               data-target="${skill.nivel}"></div>
+          <span class="badge">${skill.nivel}</span>
         </div>`;
       techEl.appendChild(div);
     });
 
-    /* Blandas */
+    const techObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          Array.from(techEl.children).forEach(child => {
+            child.style.opacity  = '1';
+            child.style.transform = 'translateY(0)';
+          });
+          techObs.disconnect();
+        }
+      });
+    }, { threshold: 0.15 });
+    techObs.observe(techEl);
+
     const blandEl = document.getElementById('skills-blandas');
-    CONFIG.habilidades.blandas.forEach(s => {
+    CONFIG.habilidades.blandas.forEach((s, i) => {
       const span = document.createElement('span');
       span.className = 'tag';
       span.textContent = s;
+      span.style.cssText = `opacity:0; transform:translateY(14px); transition: opacity .45s ease ${i * 60}ms, transform .45s ease ${i * 60}ms;`;
       blandEl.appendChild(span);
     });
 
-    /* Herramientas */
+    const blandObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          Array.from(blandEl.children).forEach(child => {
+            child.style.opacity   = '1';
+            child.style.transform = 'translateY(0)';
+          });
+          blandObs.disconnect();
+        }
+      });
+    }, { threshold: 0.15 });
+    blandObs.observe(blandEl);
+
     const toolEl = document.getElementById('skills-herramientas');
-    CONFIG.habilidades.herramientas.forEach(t => {
+    CONFIG.habilidades.herramientas.forEach((t, i) => {
       const span = document.createElement('span');
       span.className = 'tag';
       span.textContent = t;
+      span.style.cssText = `opacity:0; transform:translateY(14px); transition: opacity .45s ease ${i * 60}ms, transform .45s ease ${i * 60}ms;`;
       toolEl.appendChild(span);
     });
+
+    const toolObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          Array.from(toolEl.children).forEach(child => {
+            child.style.opacity   = '1';
+            child.style.transform = 'translateY(0)';
+          });
+          toolObs.disconnect();
+        }
+      });
+    }, { threshold: 0.15 });
+    toolObs.observe(toolEl);
   }
 
   /* ─────────────────────────────────────────────────────────────────
@@ -1194,22 +1223,6 @@
   }, { passive: true });
 
   /* ─────────────────────────────────────────────────────────────────
-     SKILL BARS — Intersection Observer
-  ───────────────────────────────────────────────────────────────── */
-  function activateSkillBars() {
-    const fills = document.querySelectorAll('.skill-fill');
-    const obs = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.style.width = e.target.dataset.target + '%';
-          obs.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.35 });
-    fills.forEach(f => obs.observe(f));
-  }
-
-  /* ─────────────────────────────────────────────────────────────────
      FORMULARIO DE CONTACTO
   ───────────────────────────────────────────────────────────────── */
   window.addEventListener('load', () => {
@@ -1218,7 +1231,7 @@
     renderSobreMi();
     renderProyectos();
     renderFormacion();
-    renderSkills();
+    renderHabilidades();
     renderContacto();
     renderFooter();
 
@@ -1231,8 +1244,6 @@
       });
       AOS.refresh();
     } catch(e) { console.warn('AOS no disponible:', e); }
-
-    setTimeout(activateSkillBars, 600);
 
     window.addEventListener('resize', () => AOS.refresh(), { passive: true });
   });
